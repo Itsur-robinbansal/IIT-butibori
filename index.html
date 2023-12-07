@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Welcome to IIT Butibori</title>
+    <link rel="icon" type="image/png" href="img/aa.png">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        #navbar {
+            position: relative;
+         transition: top 0.3s;
+            
+         } 
+
+        /* Style for the fixed position of the navigation bar */
+        #navbar.fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        }
+
+        #msg {
+            float: left;
+            /* background:Red; */
+            width: 50%;
+            /* height:280px; */
+            margin-left: 15%;
+            font-size: medium;
+        }
+
+        #dipho {
+            float: right;
+            /* background:blue; */
+            width: 15%;
+            /* height:280px; */
+            margin-right: 15%;
+        }
+
+        /* CSS for mobile devices */
+        @media (max-width: 767px) {
+            #dipho {
+                float: none;
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+
+            #msg {
+                float: none;
+                width: 100%;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+
+            body {
+                font-size: 16px;
+            }
+
+        }
+    </style>
+</head>
+
+<body id="home">
+    <!-- Start Your Body Code From here -->
+    <div class="wrapper">
+        <!-- header starts here -->
+        <header id="header" class="" style="max-width:100%;">
+            <!-- header -->
+            <div class="header-wrapper">
+                <div class="header-container">
+                    <div>
+                        <div class="logo-name">
+                            <div class="logo"><a href="index.html" title=""><img src="img/aa.png" alt="logo"
+                                        class="img-responsive"></a></div>
+                            <div class="name">
+                                <a href="index.html" title="">
+                                    <h5>International Institute of Technology</h5>
+                                    <h5 class="primary-color">Butibori</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-links">
+                        <a href="#" data-toggle="popover" title="Address"
+                            data-content="IIIT Nagpur, Sutgirni Village - Waranga, PO - Dongargaon(Butibori), Tahsil- Nagpur (Rural), District Nagpur, Maharashtra- 441108"
+                            data-placement="bottom"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></a>
+
+                        <a href="#" data-toggle="popover" title="Phone No." data-content="+91-7009852477"
+                            data-placement="bottom"><i class="fa fa-phone fa-lg" aria-hidden="true"></i></a>
+
+                        <a href="#" data-toggle="popover" title="Email" data-content="bt21cse077@iiitn.ac.in"
+                            data-placement="bottom"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="navbar navbar-inverse navbar-custom" role="navigation" id="navbar" >
+                    <div class="container">
+                        <div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse"
+								data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Institute <b
+                                            class="caret"></b></a>
+                                    <ul class="dropdown-menu multi-level">
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="directors_message.html">Director's Message</a></li>
+                                        <li><a href="bog.html">Board of Governors</a></li>
+                                        <!-- <li><a href="society_members.html">Society Members</a></li> -->
+                                        <!-- <li><a href="academic_council.html">Academic Council</a></li> -->
+                                        <!-- <li><a href="finance_committee.html">Finance Committee</a></li> -->
+                                        <!-- <li><a href="rti.html">RTI</a></li> -->
+                                        <li><a href="mou.html">MOU</a></li>
+                                        <!-- <li class="dropdown-submenu">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Linkages</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="linkages/da-iict.html">DA-IICT</a></li>
+                                                <li><a href="linkages/gsfc.html">GSFC</a></li>
+                                                <li><a href="linkages/germi.html">GERMI</a></li>
+                                                <li><a href="linkages/tcs.html">TCS</a></li>
+                                            </ul>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Academics <b
+                                            class="caret"></b></a>
+                                    <ul class="dropdown-menu multi-level">
+                                        <li class="dropdown-submenu">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">B.Tech</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="btech_cse.html">CSE</a></li>
+                                                <li><a href="btech_aiml.html">CSE - AI/ML</a></li>
+                                                <li><a href="btech_dsa.html">CSE - DSA</a></li>
+                                                <li><a href="btech_hcig.html">CSE - HCIG</a></li>
+                                                <li><a href="btech_ece.html">ECE</a></li>
+                                                <li><a href="btech_iot.html">ECE - IOT</a></li>
+                                            </ul>
+                                        </li>
+                                        <!-- <li class="dropdown-submenu">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">M.Tech</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="mtech_cse.html">CSE</a></li>
+                                            </ul>
+                                        </li> -->
+                                        <li><a href="phd_admission.html">Ph.D</a></li>
+                                        <li><a href="faculty.html">Department</a></li>
+
+                                        <li><a href="calender.html">Academic Calender</a>
+                                        </li>
+                                </li>
+
+                            </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admission <b
+                                        class="caret"></b></a>
+                                <ul class="dropdown-menu multi-level">
+                                    <li><a href="btech_admission.html">B.Tech</a></li>
+                                    <!-- <li><a href="mtech_admission.html">M.Tech</a></li> -->
+                                    <li><a href="phd_admission.html">Ph.D</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">People <b
+                                        class="caret"></b></a>
+                                <ul class="dropdown-menu multi-level">
+                                    <li class="dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Faculty</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="faculty_cse.html">CSE</a></li>
+                                            <!-- <li><a href="btech_aiml.html">CSE - AI/ML</a></li>
+                                                <li><a href="btech_dsa.html">CSE - DSA</a></li>
+                                                <li><a href="btech_hcig.html">CSE - HCIG</a></li> -->
+                                            <li><a href="faculty_ece.html">ECE</a></li>
+                                            <li><a href="faculty_bs.html">Basic Science</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li><a href="faculty.html">Faculty</a></li> -->
+                                    <!-- <li><a href="visiting_faculty.html">Visiting Faculty</a></li> -->
+                                    <!-- <li><a href="staff.html">Staff</a></li> -->
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b
+                                        class="caret"></b></a>
+                                <ul class="dropdown-menu multi-level">
+                                    <!-- <li><a href="faq.html">FAQs</a></li> -->
+                                    <li><a href="student_corner.html">Student's Corner</a></li>
+                                    <li><a href="https://moodle.iiitn.ac.in/" target="_blank">Moodle</a></li>
+                                    <!-- <li><a href="library.html">Library</a></li> -->
+                                    <!-- <li><a href="invited_talks.html">Invited Talks</a></li> -->
+                                </ul>
+                            </li>
+                            <li><a href="placement.html">Placement</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- /header -->
+
+        <!-- carousel -->
+        <!-- <div class="carousel-wrapper">
+        <div class="carousel" style="margin: 0 auto">
+            <div class="carousel-items">
+                <img height="400px" src="img/gallery/faculty.jpg" alt="Faculty">
+                <div></div>
+            </div>
+            <div class="carousel-items">
+                <img height="400px" src="img/gallery/gallery.jpg" alt="Gallery">
+                <div></div>
+            </div>
+            <div class="carousel-items">
+                <img height="400px" src="img/gallery/students.jpg" alt="Students">
+                <div></div>
+            </div>
+            <div class="carousel-items">
+                <img height="400px" src="img/gallery/talk.jpg" alt="Talk">
+                <div></div>
+            </div>
+            <div class="carousel-items">
+                <img height="400px" src="img/gallery/winners.jpg" alt="Winners">
+                <div></div>
+            </div>
+        </div>
+    </div> -->
+        <div>
+
+            <div id="msg" style="max-width:fit-content;">
+                <div>
+                    <h2><b>Director Message</b></h2>
+                </div>
+                <p>A very warm greeting from International Institute of Technology, Butibori.</p>
+
+                <p>I, Robin Bansal, am fortunate to have an opportunity to get associated with IIT, Butibori as its
+                    Founder
+                    Director. I joined this coveted Institution of National Importance on 26th June 2018 and have
+                    witnessed
+                    its phenomenal growth since then. </p>
+
+                <p>When I look back, I could see the transformation happened in last few years from the humble start of
+                    IIT, Butibori in the Makeshift Campus to state-of-the-art sprawling 100 Acres Permanent Campus
+                    consisting
+                    of Air-Conditioned Class Rooms &amp; Laboratories and soothing exteriors. It is true that full
+                    development of the campus is a long process and will take time. But I hope that in next few years
+                    the
+                    Campus shall be rated at par with any other Centrally Funded Institution.</p>
+
+                <p>From meagre 48 students in 2016-17 to more than 1400 students in 2022-23 and expected strength of
+                    1800
+                    students in 2023-24, the Institute has come a long way. The popularity of IIT, Butibori <a
+                        href="directors_message.html">Read More...</a></p><a href="directors_message.html">
+
+
+                </a>
+            </div>
+            <div id="dipho"><a href="directors_message.html">
+                    <div style="text-align: center;">
+                        <h2> Director of IITB
+                        </h2>
+                    </div>
+                    <img src="img/robin.jpg" class="img-responsive img-thumbnail" alt="Dr. Robin Bansal">
+                </a>
+                <h4 class="" style="text-align: center;"><a href="directors_message.html"></a><a
+                        href="directors_message.html">Mr. Robin Bansal</a>
+                </h4>
+            </div>
+
+        </div>
+        <br>
+        <!-- Announcements, Events, News -->
+        <div class="widgets-wrapper">
+            <div class="widgets-container">
+
+                <!-- Edit this section for important announcements.-->
+                <div class="alert alert-warning text-center">
+                    Institute invites applications for <a class="alert-link" href="admissions.html">BTech
+                        Admission - Academic Year 2024-28</a>
+                </div>
+
+                <!-- Announcements -->
+                <div class="col-sm-4" id="announcements">
+                    <div class='announcement-content '>
+                        <div class="widgets-title">
+                            <h2>Announcements</h2>
+                        </div>
+                        <ul id="announcement-list">
+                            <li>
+                                <!-- For admissions <b>M.Tech. and Ph.D. programs</b> visit:
+                                <br> -->
+                                <a href="https://iiitn.ac.in/images/NewsEvents/918/NewsDocument.pdf" target="_blank">
+                                    CSE Sessional 2 Examination for higher semester</a>
+                            </li>
+                            <li>
+                                <!-- For admissions <b>M.Tech. and Ph.D. programs</b> visit:
+                                <br> -->
+                                <a href="https://iiitn.ac.in/images/NewsEvents/917/NewsDocument.pdf" target="_blank">
+                                    ECE Sessional 2 Examination for higher semester</a>
+                            </li>
+                            <li>
+                                <!-- For admissions <b>M.Tech. and Ph.D. programs</b> visit:
+                                <br> -->
+                                <a href="https://iiitn.ac.in/images/NewsEvents/917/NewsDocument.pdf" target="_blank">
+                                    Ganpesh Chaturthi Celebration</a>
+                            </li>
+                            <li>
+                                <!-- For admissions <b>M.Tech. and Ph.D. programs</b> visit:
+                                <br> -->
+                                <a href="https://iiitn.ac.in/images/NewsEvents/911/NewsDocument.pdf" target="_blank">
+                                    Advisory on Eye Flu (Conjunctivitis) Prevention</a>
+                            </li>
+                            <li>
+                                <!-- For admissions <b>M.Tech. and Ph.D. programs</b> visit:
+                                <br> -->
+                                <a href="https://iiitn.ac.in/images/NewsEvents/846/NewsDocument.pdf" target="_blank">
+                                    New bus Timings</a>
+                            </li>
+                            <li>
+                                For queries related to <b>B.Tech. programs </b>contact us at: &nbsp; &nbsp; <span
+                                    style="font-size: 12px; font-weight: bold;color:Black"><a
+                                        href="mailto:admissions@iiitn.ac.in">admissions@iiitn.ac.in</a></span>
+                            </li>
+                            <li>
+                                Government of India Schemes for Students' Welfare <a
+                                    href="https://www.vidyalakshmi.co.in/Students/indexPopup"
+                                    target="_blank">www.vidyalakshmi.co.in </a><a
+                                    href="https://www.scholarships.gov.in/main.do" target="_blank">
+                                    www.scholarships.gov.in </a>
+                            </li>
+                        </ul>
+                        <div id="announcement-list-pagination">
+                            <a id="announcement-list-previous" href="#">
+                                <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+
+                            </a>
+                            <a id="announcement-list-next" href="#">
+                                <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events -->
+                <div class="col-sm-4" id="events">
+                    <div class="events-content">
+                        <div class="widgets-title">
+                            <h2>Events</h2>
+                        </div>
+                        <ul id="events-list">
+                            <li>
+                                <!-- Events -->
+                                <div class="event-container">
+                                    <!-- Date -->
+                                    <div class="date">
+                                        <span>
+                                            <!-- Day -->
+                                            <div class="day">19</div>
+                                            <!-- Month Short Form (first three letters) -->
+                                            <div class="month">Sept</div>
+                                        </span>
+                                    </div>
+                                    <!-- Event-Description -->
+                                    <div class="event-text">Ganesh Chaturthi</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="event-container">
+                                    <!-- Date -->
+                                    <div class="date">
+                                        <span>
+                                            <!-- Day -->
+                                            <div class="day">28</div>
+                                            <!-- Month Short Form (first three letters) -->
+                                            <div class="month">Sept</div>
+                                        </span>
+                                    </div>
+                                    <!-- Event-Description -->
+                                    <div class="event-text">Eid-e-Milad</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="event-container">
+                                    <!-- Date -->
+                                    <div class="date">
+                                        <span>
+                                            <!-- Day -->
+                                            <div class="day">13</div>
+                                            <!-- Month Short Form (first three letters) -->
+                                            <div class="month">Oct</div>
+                                        </span>
+                                    </div>
+                                    <!-- Event-Description -->
+                                    <div class="event-text">Spectrum</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="event-container">
+                                    <!-- Date -->
+                                    <div class="date">
+                                        <span>
+                                            <!-- Day -->
+                                            <div class="day">21</div>
+                                            <!-- Month Short Form (first three letters) -->
+                                            <div class="month">Oct</div>
+                                        </span>
+                                    </div>
+                                    <!-- Event-Description -->
+                                    <div class="event-text">Convocation</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="event-container">
+                                    <!-- Date -->
+                                    <div class="date">
+                                        <span>
+                                            <!-- Day -->
+                                            <div class="day">12</div>
+                                            <!-- Month Short Form (first three letters) -->
+                                            <div class="month">Nov</div>
+                                        </span>
+                                    </div>
+                                    <!-- Event-Description -->
+                                    <div class="event-text">Diwali Holidays</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="event-container">
+                                    <!-- Date -->
+                                    <div class="date">
+                                        <span>
+                                            <!-- Day -->
+                                            <div class="day">22</div>
+                                            <!-- Month Short Form (first three letters) -->
+                                            <div class="month">Feb</div>
+                                        </span>
+                                    </div>
+                                    <!-- Event-Description -->
+                                    <div class="event-text">Tectronix</div>
+                                </div>
+                            </li>
+                            <!-- <li>
+                                <div class="event-container">-->
+                            <!-- Date -->
+                            <!-- <div class="date">
+                                        <span>
+                                            Day
+                                           <div class="day">14</div> -->
+                            <!-- Month Short Form (first three letters) -->
+                            <!-- <div class="month">Jan</div>
+                                        </span>
+                                    </div> -->
+                            <!-- Event-Description -->
+                            <!-- <div class="event-text">Nabhyaan: A festival of kite</div>
+                                </div>
+                            </li> -->
+
+                        </ul>
+                        <div id="events-list-pagination">
+                            <a id="events-list-previous" href="#">
+                                <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+
+                            </a>
+                            <a id="events-list-next" href="#">
+                                <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-4" id="news">
+                    <div class='news-content '>
+                        <div class="widgets-title">
+                            <h2>News</h2>
+                        </div>
+                        <ul id="news-list">
+                            <li>
+                                <b>Mr. Robin Bansal</b> got a PPO of <b> 69 Lpa</b> as <b> Director of IITB</b>
+
+                            </li>
+                        </ul>
+
+                        <ul id="news-list">
+                            <li>
+                                <b>Dr. Madhuri Tayade</b>
+                                </br> will get Promotion to
+                                <b>Assistant Professor</b> soon
+
+
+                            </li>
+                        </ul>
+                        <ul id="news-list">
+                            <li>
+                                <b>Group A</b> of TC headed by <b>Robin Bansal</b> gets <b>10 out of 10</b> for their
+                                presentation
+
+                            </li>
+                        </ul>
+
+
+                        <ul id="news-list">
+                            <li>
+                                <b>IIT Butibori</b> get 1st NIRF ranking in Engineering surpassing IIT bombay
+
+                            </li>
+                        </ul>
+
+                        <div id="news-list-pagination">
+                            <a id="news-list-previous" href="#">
+                                <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+
+                            </a>
+                            <a id="news-list-next" href="#">
+                                <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-wrapper">
+                <span class="logo"><img src="img/aa.png" alt=""></span>
+                <div class="row">
+                    <div class="col-sm-4 address">
+                        <strong>Address : </strong>Survey No. 140,141/1 behind Br. Sheshrao Wankhade Shetkari Sahkari
+                        Soot Girni, Village - Waranga, PO - Dongargaon(Butibori), Tahsil- Nagpur (Rural), District
+                        Nagpur, Maharashtra- 441108
+                    </div>
+                    <div class="col-sm-4 links">
+                        <div>
+                            <a href="index.html#news">News</a>
+                            <i class="seperator"></i>
+                            <a href="index.html#announcements">Announcement</a>
+                            <i class="seperator"></i>
+                            <a href="index.html#events">Events</a>
+                        </div>
+                        <div>
+                            <a href="index.html">Home</a>
+                            <i class="seperator"></i>
+                            <a href="bog.html">BOG</a>
+                            <i class="seperator"></i>
+                            <a href="mou.html">MOU</a>
+                        </div>
+                        <div>
+                            <a href="admissions.html">Admission</a>
+                            <i class="seperator"></i>
+                            <a href="student_corner.html">Rules</a>
+                            <i class="seperator"></i>
+                            <a href="faculty.html">Faculty</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 footer-social">
+                        <a href="https://www.facebook.com/itsurRobinBansal/"><i class="fa fa-facebook"
+                                aria-hidden="true" title="Official Facebook Page"></i></a>
+                        <a href="https://github.com/itsur-robinbansal"><i class="fa fa-github" aria-hidden="true"
+                                title="Github Group"></i></a>
+                        <a href="https://www.linkedin.com/in/itsurrobinbansal/"><i class="fa fa-linkedin"
+                                aria-hidden="true" title="LinkedIn Profile"></i></a>
+                        <a href="https://www.twitter.com/its_ur_robin/" title=""><i class="fa fa-twitter"
+                                aria-hidden="true" title="Official Twitter Account"></i></a>
+                        <a href="https://www.instagram.com/its_ur_robinbansal/" title=""><img height="19px"
+                                src="img/insta.png" aria-hidden="true" title="Official Instagram Account"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.paginate.min.js "></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/434d359724.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+            $('[data-toggle="popover"]').on('click', function (e) {
+                $('[data-toggle="popover"]').not(this).popover('hide');
+            });
+        });
+
+        window.onscroll = function () {
+            const navbar = document.getElementById('navbar');
+            const scrollPos = window.scrollY;
+
+            if (scrollPos > 100) { // Change 100 to the desired scroll position to trigger the fixed navbar
+                navbar.classList.add('fixed');
+            } else {
+                navbar.classList.remove('fixed');
+            }
+        };
+
+    </script>
+
+</body>
+
+</html>

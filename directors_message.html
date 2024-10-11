@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>IITB | Director's Message</title>
     <!--Style Starts-->
     <link rel="icon" type="image/png" href="img/aa.png">
@@ -10,20 +12,115 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
         integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+        /* Ensure navbar is fixed */
+        #navbar {
+            position: relative;
+            transition: top 0.3s;
+
+        }
+
+        /* Style for the fixed position of the navigation bar */
+        #navbar.fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* #msg {
+            float: right;
+         
+            width: 100%;
+           
+            /* margin-left: 5%; */
+        /* font-size: medium;
+        }  */
+        */
+
+        /* #dipho {
+            float: left;
+           
+            width: 20%;
+            */
+        /* }  */
+        /* General container styling */
+        .dir-msg {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .dir-detail {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .dir-text {
+            flex: 2;
+        }
+
+        /* Mobile view adjustments */
+        @media screen and (max-width: 768px) {
+            .dir-msg {
+                display: block;
+                text-align: center;
+            }
+
+            .dir-detail {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .dir-text {
+                text-align: left;
+                padding: 0 15px;
+            }
+
+            .dir-detail img {
+                width: 150px;
+                height: auto;
+                margin: 0 auto;
+                border-radius: 50%;
+            }
+        }
+
+        /* For small screens (optional adjustment) */
+        /* @media (max-width: 768px) {
+
+            /* #dipho {
+                float: none;
+                width: 100%;
+            }
+
+            #msg {
+                float: none;
+                width: 70%;
+                /* margin-left: 10%; */
+            /* margin-right: 10%; */
+            /* } */
+            /* body {
+                font-size: 16px;
+            } */
+        
+    </style>
 </head>
 
-<body>
+<body id="home">
     <!-- Start Your Body Code From here -->
     <div class="wrapper">
         <!-- header starts here -->
-        <header id="header" class="">
+        <header id="header" class="max-width:100%;">
             <!-- header -->
             <!-- header -->
             <div class="header-wrapper">
                 <div class="header-container">
                     <div>
                         <div class="logo-name">
-                            <div class="logo"><a href="index.html" title=""><img src="img/aa.png" alt="logo"></a></div>
+                            <div class="logo"><a href="index.html" title=""><img src="img/aa.png" alt="logo"
+                                        class="img-responsive"></a></div>
                             <div class="name">
                                 <a href="index.html" title="">
                                     <h5>International Institute of Technology</h5>
@@ -46,7 +143,7 @@
                 </div>
             </div>
             <nav>
-                <div class="navbar navbar-inverse navbar-custom" role="navigation">
+                <div class="navbar navbar-inverse navbar-custom" role="navigation" id="navbarr">
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -57,7 +154,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                         </div>
-                        <div class="collapse navbar-collapse" >
+                        <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav">
                                 <li class="active">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Institute <b
@@ -104,59 +201,60 @@
                                                 </ul>
                                             </li> -->
                                         <li><a href="phd_admission.html">Ph.D</a></li>
-                                                                             <li><a href="faculty.html">Department</a></li>
+                                        <li><a href="faculty.html">Department</a></li>
 
                                         <li><a href="calender.html">Academic Calender</a>
-                                        </li>"faculty.html">Department</a></li>
-
-                                        <li><a href="calender.html">Academic Calender</a>
-                                        </li>
-                                        </li>
-
-                                    </ul>
+                                        </li>"faculty.html">Department</a>
                                 </li>
-                                <li>
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admission <b
-                                            class="caret"></b></a>
-                                    <ul class="dropdown-menu multi-level">
-                                        <li><a href="btech_admission.html">B.Tech</a></li>
-                                        <!-- <li><a href="mtech_admission.html">M.Tech</a></li> -->
-                                        <li><a href="phd_admission.html">Ph.D</a></li>
-                                    </ul>
+
+                                <li><a href="calender.html">Academic Calender</a>
                                 </li>
-                                <li>
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">People <b
-                                            class="caret"></b></a>
-                                    <ul class="dropdown-menu multi-level">
-                                        <li class="dropdown-submenu">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Faculty</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="faculty_cse.html">CSE</a></li>
-                                                <!-- <li><a href="btech_aiml.html">CSE - AI/ML</a></li>
+                                </li>
+
+                            </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admission <b
+                                        class="caret"></b></a>
+                                <ul class="dropdown-menu multi-level">
+                                    <li><a href="btech_admission.html">B.Tech</a></li>
+                                    <!-- <li><a href="mtech_admission.html">M.Tech</a></li> -->
+                                    <li><a href="phd_admission.html">Ph.D</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">People <b
+                                        class="caret"></b></a>
+                                <ul class="dropdown-menu multi-level">
+                                    <li class="dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Faculty</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="faculty_cse.html">CSE</a></li>
+                                            <!-- <li><a href="btech_aiml.html">CSE - AI/ML</a></li>
                                                     <li><a href="btech_dsa.html">CSE - DSA</a></li>
                                                     <li><a href="btech_hcig.html">CSE - HCIG</a></li> -->
-                                                <li><a href="faculty_ece.html">ECE</a></li>
-                                                <li><a href="faculty_bs.html">Basic Science</a></li>
-                                            </ul>
-                                        </li>
-                                        <!-- <li><a href="faculty.html">Faculty</a></li> -->
-                                        <!-- <li><a href="visiting_faculty.html">Visiting Faculty</a></li> -->
-                                        <!-- <li><a href="staff.html">Staff</a></li> -->
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b
-                                            class="caret"></b></a>
-                                    <ul class="dropdown-menu multi-level">
-                                        <!-- <li><a href="faq.html">FAQs</a></li> -->
-                                        <li><a href="student_corner.html">Student's Corner</a></li>
-                                        <li><a href="https://moodle.iiitn.ac.in/" target="_blank">Moodle</a></li>
-                                        <!-- <li><a href="library.html">Library</a></li> -->
-                                        <!-- <li><a href="invited_talks.html">Invited Talks</a></li> -->
-                                    </ul>
-                                </li>
-                                <li><a href="placement.html">Placement</a></li>
-                                <li><a href="gallery.html">Photo Gallery</a></li>
+                                            <li><a href="faculty_ece.html">ECE</a></li>
+                                            <li><a href="faculty_bs.html">Basic Science</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li><a href="faculty.html">Faculty</a></li> -->
+                                    <!-- <li><a href="visiting_faculty.html">Visiting Faculty</a></li> -->
+                                    <!-- <li><a href="staff.html">Staff</a></li> -->
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b
+                                        class="caret"></b></a>
+                                <ul class="dropdown-menu multi-level">
+                                    <!-- <li><a href="faq.html">FAQs</a></li> -->
+                                    <li><a href="student_corner.html">Student's Corner</a></li>
+                                    <li><a href="https://moodle.iiitn.ac.in/" target="_blank">Moodle</a></li>
+                                    <!-- <li><a href="library.html">Library</a></li> -->
+                                    <!-- <li><a href="invited_talks.html">Invited Talks</a></li> -->
+                                </ul>
+                            </li>
+                            <li><a href="placement.html">Placement</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
                             </ul>
                         </div>
                         <!--/.nav-collapse -->
@@ -168,57 +266,144 @@
         <div class="contents-wrapper">
             <!-- Contents starts here -->
             <div class="content dir-msg">
-                <div class="dir-detail">
+                <div class="dir-detail" id="dipho">
                     <img class="responsive-img circle" src="img/robin.jpg" height="157px" width="157x">
                     <div>Mr. Robin Bansal</div>
                     <div>
-                        Director IIT Butibori
+                        Data Analyst, LLPL, Lloyds Metals and Energy Limited
+                    </div>
+                    <div>
+                        B.Tech in CSE (2021-25), IIIT Nagpur
                     </div>
                 </div>
-                <div class="dir-text">
-                    <p>
-                        A very warm greeting from International Institute of  Technology, Butibori.
+                <div id="msg" class="dir-text">
+                    <p>A very warm welcome to my personal portfolio. more of a phenomenal college website. Have fun!!
                     </p>
-                    
-                    <p>
+                    <!-- <p>A very warm welcome to my personal portfolio, designed with the charm of a phenomenal college website.</p> -->
+
+                    <!-- <p>
+                        A very warm greeting from International Institute of  Technology, Butibori.
+                    </p> -->
+                    <p>This is just a fun project and is not intended to copy any college website or cause any harm. The
+                        content, style and language used here are for portfolio purposes only. Enjoy exploring!</p>
+
+                    <p>I, Robin Bansal, am currently a final-year student pursuing a <strong>Bachelor of Technology in
+                            Computer Science and Engineering</strong> at the <strong>Indian Institute of Information
+                            Technology (IIIT) Nagpur</strong>, with an expected graduation date of June 2025. I have
+                        always been passionate about technology and its ability to solve real-world problems, and this
+                        passion has guided me through my academic and professional journey so far. I am currently
+                        working as Data Analyst Intern at <string>Lloyds Logistics Pvt. Ltd.</string>
+                    </p>
+
+                    <!-- <p>
                         I, Robin Bansal, am fortunate to have an opportunity to get associated with IIT, Butibori as its Founder Director. I joined this coveted Institution of National Importance on 26th June 2018 and have witnessed its phenomenal growth since then.
                     </p>
-             
-                    <p>   
+              -->
+                    <!-- <p>   
                         When I look back, I could see the transformation happened in last few years from the humble start of IIT, Butibori in the Makeshift Campus to state-of-the-art sprawling 100 Acres Permanent Campus consisting of Air-Conditioned Class Rooms & Laboratories and soothing exteriors. It is true that full development of the campus is a long process and will take time. But I hope that in next few years the Campus shall be rated at par with any other Centrally Funded Institution.
+                    </p> -->
+                    <p>Since joining IIIT Nagpur in 2021, I have immersed myself in the fields of data science, software
+                        engineering, and machine learning. My time here has been marked by continuous learning and the
+                        practical application of theoretical knowledge, shaping my technical abilities and
+                        problem-solving approach.</p>
+
+                    <p>In <strong>July 2024</strong>, I started working as a <strong>Data Analyst intern</strong> at
+                        <strong>Lloyds Logistics Pvt. Ltd.</strong>, where I am responsible for analyzing large datasets
+                        related to logistics and transportation. My work involves gathering, cleaning, and organizing
+                        data to optimize logistics operations. I develop detailed reports and visualizations using tools
+                        such as <strong>Power BI</strong>, <strong>Tableau</strong>, and <strong>Excel</strong> to
+                        present findings that contribute to enhancing the efficiency of the company’s supply chain
+                        management processes. This role has allowed me to apply advanced analytical techniques to
+                        real-world challenges and gain valuable insights into the logistics industry.
                     </p>
-                    
-                    <p> 
+
+                    <!-- <p> 
                         From meagre 48 students in 2016-17 to more than 1400 students in 2022-23 and expected strength of 1800 students in 2023-24, the Institute has come a long way. The popularity of IIT, Butibori is rising amongst the students due to its Interdisciplinary Academic Curriculum. Students are offered a number of interesting combinations of minor / major courses which provide them an opportunity to get exposure to interdisciplinary subjects. Further, the Institute encourages its students for extra-curricular activities through various institute / national level events.
-                    </p>
-                    <br>
-                    <p> 
+                    </p> -->
+                    <!-- <br> -->
+                    <p>Prior to this, from <strong>May 2024 to July 2024</strong>, I completed a <strong>Project
+                            Internship</strong> at <strong>IIIT Guwahati</strong>, sponsored by the <strong>Science and
+                            Engineering Research Board (SERB)</strong>. The project focused on optimizing edge service
+                        caching to reduce latency in networked systems. By implementing a solution that strategically
+                        divided cache between public and private storage, we achieved up to a <strong>36.24% improvement
+                            in latency</strong> and <strong>reduced operational costs by over 83%</strong>. This project
+                        allowed me to dive deeper into advanced algorithms, multithreading, and system optimization,
+                        providing a strong foundation in real-time systems.</p>
+
+                    <!-- <p> 
                         The Institute is attracting a large number of coveted companies on campus and provides one of the most promising placements and internships. The Institute is having one of the best Placement Records.
 
-                    </p>
-                    <br>
-                    <p>
+                    </p> -->
+                    <!-- <br> -->
+                    <p>In addition to these internships, I have worked on several personal projects that reflect my
+                        growing expertise in machine learning, networked systems, and computer vision. One such project
+                        involved the development of an optimized data forwarding and cache management system for
+                        networked edge servers, utilizing <strong>Python</strong> and <strong>multithreading</strong>.
+                        This system significantly improved data handling efficiency and responsiveness across multiple
+                        servers. Another notable project was an image captioning system that combined the strengths of
+                        computer vision and natural language processing to generate descriptive captions for images,
+                        achieving commendable accuracy metrics on the <strong>Flickr8k dataset</strong>.</p>
+
+                    <!-- <p>
                         The faculties are also research oriented and believes in strong Academic-Industry Collaboration. They are engaged in Sponsored Research Projects, Workshops/Seminars, and Consultancy Projects. The Institute has established an Institute Innovation Cell (IIC) to foster the culture of innovation and start-up ecosystem in the Institute. The Institute has already signed a number of Memorandum of Understandings with various Organizations/Institutions for undertaking need-based research.
+                    </p> -->
+                    <!-- <br> -->
+                    <p>Beyond technical work, I have embraced leadership roles during my time at IIIT Nagpur. As the
+                        Class Representative for my batch for a semester for a subject, I managed student-related
+                        concerns and fostered communication between faculty and students. I am also an active member of
+                        the <strong>DotSlash competitive programming club</strong>, where I collaborate with fellow
+                        students to enhance problem-solving skills and promote a culture of coding excellence on campus.
                     </p>
-                    <br>
-                    <p>
+
+
+                    <p>As I reflect on my journey, I am proud of the progress I have made. From competitive programming
+                        challenges on platforms like <strong>Codeforces</strong> and <strong>Codechef</strong> to
+                        contributing to large-scale research projects, I have continually sought to improve my technical
+                        and analytical skills. My interests span across various domains, including <strong>data
+                            science</strong>, <strong>machine learning</strong>, <strong>algorithms</strong>, and
+                        <strong>Programming</strong>, and I am constantly striving to apply these skills to new
+                        challenges.
+                    </p>
+
+                    <p>Looking ahead, I am excited about the endless possibilities that lie within the tech industry. I
+                        aim to apply my knowledge and experiences to meaningful projects that can make a difference.
+                        Whether through further research or professional work, I am determined to contribute to
+                        advancements in technology that benefit society as a whole.</p>
+
+                    <p>Thank you for taking the time to explore my portfolio. I hope to continue growing and learning,
+                        and I look forward to any opportunities that may come my way.</p>
+
+                    <!-- <p>
 
                         I sincerely feel that the overall experience of the students / faculties / staff at IIT, Butibori shall be a fulfilling experience and the Institute shall scale new heights in the coming years.
-                    </p>
+                    </p> -->
                     <br>
                     <p>
-<strong>Mr. Robin Bansal</strong>
+                        <strong>Mr. Robin Bansal</strong>
                     </p>
-                    
-                    <p>
+
+                    <div>
+                        Data Analyst, LLPL, Lloyds Metals and Energy Limited
+                    </div>
+                    <div>
+                        B.Tech in CSE (2021 - 2025)
+                    </div>
+                    <div>
+                        Indian Institute of Information Technology, Nagpur<br>
+                    </div>
+                    <div>
+                        <strong>robinkb200204@gmail.com | +917009852477</strong></p>
+
+                    </div>
+                    <!-- <p>
 
              Director, IITB
-                    </p>
+                    </p> -->
                     <br>
                     <blockquote>
                         <p>“All izzz well” - Robin Bansal</p>
                     </blockquote>
- 
+<br>
                 </div>
             </div>
         </div>
@@ -260,7 +445,8 @@
                                 aria-hidden="true" title="Official Facebook Page"></i></a>
                         <a href="https://github.com/itsur-robinbansal"><i class="fa fa-github" aria-hidden="true"
                                 title="Github Group"></i></a>
-                        <a href="https://www.linkedin.com/in/itsurrobinbansal/"><i class="fa fa-linkedin" aria-hidden="true" title="LinkedIn Profile"></i></a>
+                        <a href="https://www.linkedin.com/in/itsurrobinbansal/"><i class="fa fa-linkedin"
+                                aria-hidden="true" title="LinkedIn Profile"></i></a>
                         <a href="https://www.twitter.com/its_ur_robin/" title=""><i class="fa fa-twitter"
                                 aria-hidden="true" title="Official Twitter Account"></i></a>
                         <a href="https://www.instagram.com/its_ur_robinbansal/" title=""><img height="19px"
@@ -298,6 +484,17 @@
                 }
             });
         })
+
+        window.onscroll = function () {
+            const navbar = document.getElementById('navbar');
+            const scrollPos = window.scrollY;
+
+            if (scrollPos > 100) { // Change 100 to the desired scroll position to trigger the fixed navbar
+                navbar.classList.add('fixed');
+            } else {
+                navbar.classList.remove('fixed');
+            }
+        };
     </script>
 </body>
 

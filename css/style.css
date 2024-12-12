@@ -697,7 +697,9 @@ footer .address {
 	text-align: justify;
   text-justify: inter-word;
 }
-
+.address{
+	text-align: justify;
+  text-justify: inter-word;}
 
 .links a {
 	color: rgba(0, 0, 0, 0.87);

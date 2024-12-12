@@ -19,8 +19,8 @@ body {
 }
 
 .address {
-	text-align: justify;
-  text-justify: inter-word;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 /***************

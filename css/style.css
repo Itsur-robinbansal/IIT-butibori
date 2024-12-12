@@ -693,7 +693,10 @@ footer .row {
 	font-size: 1.5rem;
 }
 
-footer .address {}
+footer .address {
+	text-align: justify;
+  text-justify: inter-word;
+}
 
 
 .links a {

@@ -18,6 +18,10 @@ body {
 	min-height: 100%;
 }
 
+.address {
+	text-align: justify;
+  text-justify: inter-word;
+}
 
 /***************
 *Wrappers

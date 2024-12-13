@@ -8,28 +8,13 @@
     <title>Welcome to IIT Butibori</title>
     <link rel="icon" type="image/png" href="img/aa.png">
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
-    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" /> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
         integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <style>
-        .footer-social a {
-            margin: 0 10px;
-            color: #333;
-            font-size: 20px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-social a:hover {
-            color: #007bff;
-            /* Adjust color for hover effect */
-        }
-
-        .footer-social i {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
         .information-desk-container {
             margin: 0 auto;
             padding: 20px;
@@ -45,6 +30,7 @@
         .home-boxs {
             background-color: #c4dad3;
             padding: 20px;
+            margin: 5px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -75,20 +61,7 @@
             text-decoration: underline;
         }
 
-        #navbar {
-            position: relative;
-            transition: top 0.3s;
 
-        }
-
-        /* Style for the fixed position of the navigation bar */
-        #navbar.fixed {
-            position: fixed;
-            top: 0;
-            width: 100%;
-
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
 
         #msg {
             float: left;
@@ -98,9 +71,56 @@
             margin-left: 20%;
             font-size: medium;
             text-align: justify;
-  text-justify: inter-word;
+            text-justify: inter-word;
         }
 
+        body.dark-mode #main-page-link-admission {
+            background-color: #333;
+            color: white;
+            transition: background-color 0.5s ease;
+            transition: color 0.5s ease;
+
+            /* Dark mode background */
+        }
+
+        body.dark-mode #main-page-link {
+            background-color: #333;
+            color: white;
+            transition: background-color 0.5s ease;
+            transition: color 0.5s ease;
+
+            /* Dark mode background */
+        }
+
+        body.dark-mode .announcments {
+            background-color: #333;
+            color: white;
+            /* Dark mode background */
+        }
+
+
+
+        /* #mainheading{
+    color: rgb(215, 21, 21);
+}
+     */
+
+        /* Toggle button container */
+   
+
+   
+        /* Sun Icon (Black) */
+       
+
+        /* Moon Icon (White) */
+        .moon {
+            color: #f5f5f5;
+            display: none;
+            /* opacity: 0; */
+            /* Hidden by default (light mode) */
+        }
+
+       
         #dipho {
             float: right;
             /* background:blue; */
@@ -129,6 +149,14 @@
                 font-size: 16px;
             }
 
+            .toggle-button {
+                top: 9vh;
+                /* right: 3vh; */
+                right: 24px;
+                /* padding: 8px 8px; */
+                font-size: 14px;
+            }
+
         }
     </style>
 </head>
@@ -147,22 +175,30 @@
                                         class="img-responsive"></a></div>
                             <div class="name">
                                 <a href="index.html" title="">
-                                    <h5>International Institute of Technology</h5>
-                                    <h5 class="primary-color">Butibori</h5>
+                                    <h5 id="mainheading">International Institute of Technology</h5>
+                                    <h5 class="primary-color">Butibori </h5>
                                 </a>
                             </div>
                         </div>
+
+                        <div id="theme-toggle" class="toggle-button">
+                            <i class="fas fa-sun sun"></i>
+                            <i class="fas fa-moon moon"></i>
+                        </div>
                     </div>
-                    <div class="header-links">
-                        <a href="#" data-toggle="popover" title="Address"
-                            data-content="IIIT Nagpur, Sutgirni Village - Waranga, PO - Dongargaon(Butibori), Tahsil- Nagpur (Rural), District Nagpur, Maharashtra - 441108"
-                            data-placement="bottom"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></a>
+                    <div>
+                        <div class="header-links">
 
-                        <a href="#" data-toggle="popover" title="Phone No." data-content="+91-7009852477"
-                            data-placement="bottom"><i class="fa fa-phone fa-lg" aria-hidden="true"></i></a>
 
-                        <a href="#" data-toggle="popover" title="Email" data-content="robinkb200204@gmail.com"
-                            data-placement="bottom"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="popover" title="Address" data-content="Patiala, Punjab - 147201"
+                                data-placement="bottom"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></a>
+
+                            <a href="#" data-toggle="popover" title="Phone No." data-content="+91-7009852477"
+                                data-placement="bottom"><i class="fa fa-phone fa-lg" aria-hidden="true"></i></a>
+
+                            <a href="#" data-toggle="popover" title="Email" data-content="robinkb200204@gmail.com"
+                                data-placement="bottom"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -268,14 +304,22 @@
                                 <ul class="dropdown-menu multi-level">
                                     <!-- <li><a href="faq.html">FAQs</a></li> -->
                                     <li><a href="student_corner.html">Student's Corner</a></li>
-                                     
+
                                     <!-- <li><a href="library.html">Library</a></li> -->
                                     <!-- <li><a href="invited_talks.html">Invited Talks</a></li> -->
                                 </ul>
                             </li>
                             <li><a href="placement.html">Placement</a></li>
                             <li><a href="gallery.html">Photo Gallery</a></li>
+
+                            <li>
+                                <!-- <div id="theme-toggle" class="toggle-button">
+                                    <i class="fas fa-sun sun"></i>
+                                    <i class="fas fa-moon moon"></i>
+                                </div> -->
+                            </li>
                             </ul>
+
                         </div>
                         <!--/.nav-collapse -->
                     </div>
@@ -320,7 +364,9 @@
                 <br>
                 <p>A very warm welcome to my personal portfolio. more of a phenomenal college website.</p>
                 <p>
-This is just a fun project and isn’t meant to copy any college website or cause any harm. So, please don’t take it to heart (or kidney or liver). And if you still have a problem, kindly read the disclaimer below. Have fun!!!
+                    This is just a fun project and isn’t meant to copy any college website or cause any harm. So, please
+                    don’t take it to heart (or kidney or liver). And if you still have a problem, kindly read the
+                    disclaimer below. Have fun!!!
                 </p>
                 <p>I, Robin Bansal, am currently a final-year student pursuing a <strong>Bachelor of Technology in
                         Computer Science and Engineering</strong> at the <strong>Indian Institute of Information
@@ -335,7 +381,8 @@ This is just a fun project and isn’t meant to copy any college website or caus
                     witnessed
                     its phenomenal growth since then. </p> -->
                 <p>Since joining IIIT Nagpur in 2021, I have immersed myself in the fields of software
-                    engineering, Competitive programing and Machine learning. My time here has been marked by continuous learning and the
+                    engineering, Competitive programing and Machine learning. My time here has been marked by continuous
+                    learning and the
                     practical application of theoretical knowledge, shaping my technical abilities and problem-solving
                     approach.</p>
 
@@ -348,8 +395,8 @@ This is just a fun project and isn’t meant to copy any college website or caus
                     Campus shall be rated at par with any other Centrally Funded Institution.</p> -->
                 <p>In <strong>July 2024</strong>, I began working as a <strong>Data Analyst intern</strong> at
                     <strong>Lloyds Logistics Pvt. Ltd.</strong>, where I am responsible for analyzing large datasets
-                    related to logistics and transportation. <a href="directors_message.html">Read More...</a></p><a
-                    href="directors_message.html"></a>
+                    related to logistics and transportation. <a href="directors_message.html">Read More...</a>
+                </p><a href="directors_message.html"></a>
 
 
                 <!-- My work involves gathering, cleaning, and organizing data to optimize logistics operations. I develop detailed reports and visualizations using tools such as <strong>Power BI</strong>, <strong>Tableau</strong>, and <strong>Excel</strong> to present findings that contribute to enhancing the efficiency of the company’s supply chain management processes. This role has allowed me to apply advanced analytical techniques to real-world challenges and gain valuable insights into the logistics industry.</p> -->
@@ -381,9 +428,10 @@ This is just a fun project and isn’t meant to copy any college website or caus
             <div class="widgets-container">
 
                 <!-- Edit this section for important announcements.-->
-                <div class="alert alert-warning text-center">
-                    Institute invites applications for <a class="alert-link" href="admissions.html"><u>BTech
-                        Admission - Academic Year 2024-28</u></a>
+                <div class="alert alert-warning text-center" id="main-page-link">
+                    Institute invites applications for <a class="alert-link" id="main-page-link-admission"
+                        href="admissions.html"><u>BTech
+                            Admission - Academic Year 2025-29</u></a>
                 </div>
 
                 <!-- Announcements -->
@@ -394,67 +442,70 @@ This is just a fun project and isn’t meant to copy any college website or caus
                             <h2>Announcements</h2>
                         </div>
                         <ul id="announcement-list">
-                            <li>
+                            <li class="announcments">
                                 <!-- For admissions <b>M.Tech. and Ph.D. programs</b> visit:
                                 <br> -->
-                                <a href="https://api.iiitn.ac.in/data/IIITN/2024/October/ContentDocs/CN_ID_1728461423052rXFMqNQM612gDP2/17284614178850b4fOqNHd75vWja.pdf"
-                                    target="_blank">
+                                <a href="Fees.pdf" target="_blank">
+                                    Placed or not, we’re taking those ₹16 lakhs—submit your fees before the semester
+                                    ends!
+                                </a>
+                            </li>
+                            <li class="announcments">
+                                <!-- For admissions <b>M.Tech. and Ph.D. programs</b> visit:
+                                <br> -->
+                                <a href="cseds.pdf" target="_blank">
                                     CSE Sessional 2 Examination for higher semester</a>
                             </li>
-                            <li>
+                            <li class="announcments">
                                 <!-- For admissions <b>M.Tech. and Ph.D. programs</b> visit:
                                 <br> -->
-                                <a href="https://api.iiitn.ac.in/data/IIITN/2024/October/ContentDocs/CN_ID_1728461391344ZIg7KPe0BWu0p56/1728461381409fFzBHYHhffCDxwz.pdf"
-                                    target="_blank">
+                                <a href="eceds.pdf" target="_blank">
                                     ECE Sessional 2 Examination for higher semester</a>
                             </li>
-                            <li>
+                            <li class="announcments">
                                 <!-- For admissions <b>M.Tech. and Ph.D. programs</b> visit:
                                 <br> -->
-                                <a href="https://api.iiitn.ac.in/data/IIITN/2024/September/ContentDocs/CN_ID_1725423457142dtlXND5DANugmpz/1725423421561Q6vc6oVAPyxtzLc.pdf"
-                                    target="_blank">
+                                <a href="socialmedia.pdf" target="_blank">
                                     No Meme Policy Of College due to Robin's Insta Story</a>
                             </li>
-                            <li>
+                            <li class="announcments">
                                 <!-- For admissions <b>M.Tech. and Ph.D. programs</b> visit:
                                 <br> -->
-                                <a href="https://api.iiitn.ac.in/data/IIITN/2024/September/ContentDocs/CN_ID_1725423457142dtlXND5DANugmpz/1725423421561Q6vc6oVAPyxtzLc.pdf"
-                                    target="_blank">
-                                    A few directors have decided to resign — guess they couldn't dodge the <i>corruption </i>charges after all!</a>
+                                <a href="NewDirector.pdf" target="_blank">
+                                    A few directors have decided to resign — guess they couldn't dodge the <i>corruption
+                                    </i>charges after all!</a>
                             </li>
-                            <li>
+                            <li class="announcments">
                                 <!-- For admissions <b>M.Tech. and Ph.D. programs</b> visit:
                                 <br> -->
-                                <a href="https://api.iiitn.ac.in/data/IIITN/2024/September/ContentDocs/CN_ID_1726739723863NB6fsuzNYgATPgr/17267397178160n1c5IoDkd4d9h1.pdf"
-                                    target="_blank">
+                                <a href="project.pdf" target="_blank">
                                     Project Evolution Policy</a>
                             </li>
-                            <li>
+                            <li class="announcments">
                                 <!-- For admissions <b>M.Tech. and Ph.D. programs</b> visit:
                                 <br> -->
-                                <a href="https://api.iiitn.ac.in/data/IIITN/2024/September/ContentDocs/CN_ID_1725423457142dtlXND5DANugmpz/1725423421561Q6vc6oVAPyxtzLc.pdf"
-                                    target="_blank">
+                                <a href="scholarship.pdf" target="_blank">
                                     Registration for Scholarship schemes</a>
                             </li>
                             <!-- <li>
                                 <For admissions <b>M.Tech. and Ph.D. programs</b> visit:
                                 <br> -->
-                                <!-- <a href="https://api.iiitn.ac.in/data/IIITN/2024/September/ContentDocs/CN_ID_1725423457142dtlXND5DANugmpz/1725423421561Q6vc6oVAPyxtzLc.pdf"
+                            <!-- <a href="https://api.iiitn.ac.in/data/IIITN/2024/September/ContentDocs/CN_ID_1725423457142dtlXND5DANugmpz/1725423421561Q6vc6oVAPyxtzLc.pdf"
                                     target="_blank">
                                     No Meme Policy Of College due to Robin's Insta Story</a> -->
                             <!-- </li> -->
-                            <li>
+                            <li class="announcments">
                                 For queries related to <b>B.Tech. programs </b>contact us at: &nbsp; &nbsp; <span
                                     style="font-size: 12px; font-weight: bold;color:Black"><a
                                         href="mailto:robinkb200204@gmail.com">admissions@iitbutibori.ac.in</a></span>
                             </li>
-                            <li>
+                            <!-- <li>
                                 Government of India Schemes for Students' Welfare <a
                                     href="https://www.vidyalakshmi.co.in/Students/indexPopup"
                                     target="_blank">www.vidyalakshmi.co.in </a><a
                                     href="https://www.scholarships.gov.in/main.do" target="_blank">
                                     www.scholarships.gov.in </a>
-                            </li>
+                            </li> -->
                         </ul>
                         <div id="announcement-list-pagination">
                             <a id="announcement-list-previous" href="#">
@@ -470,73 +521,84 @@ This is just a fun project and isn’t meant to copy any college website or caus
                 </div>
 
                 <!-- Events -->
-                <div class="col-sm-4" id="events" >
+                <div class="col-sm-4" id="events">
                     <div class="events-content">
                         <div class="widgets-title">
                             <h2>Events</h2>
                         </div>
                         <ul id="events-list">
+                            <!-- <li>
+                                 Events -->
+                            <!-- <div class="event-container"> -->
+                            <!-- Date -->
+                            <!-- <div class="date">
+                                        <span> -->
+                            <!-- Day -->
+                            <!-- <div class="day">7</div> -->
+                            <!-- Month Short Form (first three letters) -->
+                            <!-- <div class="month">Sept</div>
+                                        </span>
+                                    </div> -->
+                            <!-- Event-Description -->
+                            <!-- <div class="event-text">Ganesh Chaturthi</div>
+                                </div>
+                            </li> -->
+                            <!-- <li> -->
+                            <!-- Events -->
+                            <!-- <div class="event-container"> -->
+                            <!-- Date -->
+                            <!-- <div class="date">
+                                        <span> -->
+                            <!-- Day -->
+                            <!-- <div class="day">7</div> -->
+                            <!-- Month Short Form (first three letters) -->
+                            <!-- <div class="month">Sept</div> -->
+                            <!-- </span> -->
+                            <!-- </div> -->
+                            <!-- Event-Description -->
+                            <!-- <div class="event-text">Ganesh Chaturthi</div>
+                                </div>
+                            </li> -->
                             <li>
-                                <!-- Events -->
                                 <div class="event-container">
-                                    <!-- Date -->
                                     <div class="date">
                                         <span>
-                                            <!-- Day -->
-                                            <div class="day">7</div>
-                                            <!-- Month Short Form (first three letters) -->
-                                            <div class="month">Sept</div>
+                                            <div class="day">1</div>
+
+                                            <div class="month">Jan</div>
                                         </span>
                                     </div>
-                                    <!-- Event-Description -->
-                                    <div class="event-text">Ganesh Chaturthi</div>
+                                    <div class="event-text">Happy New Year</div>
                                 </div>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <div class="event-container">
-                                    <!-- Date -->
+                                   
                                     <div class="date">
                                         <span>
-                                            <!-- Day -->
-                                            <div class="day">18</div>
-                                            <!-- Month Short Form (first three letters) -->
-                                            <div class="month">Sept</div>
-                                        </span>
-                                    </div>
-                                    <!-- Event-Description -->
-                                    <div class="event-text">Ganesh Visarjan</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="event-container">
-                                    <!-- Date -->
-                                    <div class="date">
-                                        <span>
-                                            <!-- Day -->
+                                           
                                             <div class="day">12</div>
-                                            <!-- Month Short Form (first three letters) -->
+                                           
                                             <div class="month">Oct</div>
                                         </span>
                                     </div>
-                                    <!-- Event-Description -->
+                                  
                                     <div class="event-text">Dusherra</div>
                                 </div>
-                            </li>
-                            <li>
+                            </li> -->
+                            <!-- <li>
                                 <div class="event-container">
-                                    <!-- Date -->
                                     <div class="date">
                                         <span>
-                                            <!-- Day -->
                                             <div class="day">1</div>
-                                            <!-- Month Short Form (first three letters) -->
+                                          
                                             <div class="month">Nov</div>
                                         </span>
                                     </div>
-                                    <!-- Event-Description -->
+                                    
                                     <div class="event-text">Diwali</div>
                                 </div>
-                            </li>
+                            </li> -->
                             <li>
                                 <div class="event-container">
                                     <!-- Date -->
@@ -558,13 +620,28 @@ This is just a fun project and isn’t meant to copy any college website or caus
                                     <div class="date">
                                         <span>
                                             <!-- Day -->
-                                            <div class="day">22</div>
+                                            <div class="day">18</div>
                                             <!-- Month Short Form (first three letters) -->
-                                            <div class="month">Feb</div>
+                                            <div class="month">May</div>
                                         </span>
                                     </div>
                                     <!-- Event-Description -->
-                                    <div class="event-text">Tectronix</div>
+                                    <div class="event-text">College Last day</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="event-container">
+                                    <!-- Date -->
+                                    <div class="date">
+                                        <span>
+                                            <!-- Day -->
+                                            <div class="day">20</div>
+                                            <!-- Month Short Form (first three letters) -->
+                                            <div class="month">Oct</div>
+                                        </span>
+                                    </div>
+                                    <!-- Event-Description -->
+                                    <div class="event-text">5th Convocation</div>
                                 </div>
                             </li>
                             <!-- <li>
@@ -597,7 +674,7 @@ This is just a fun project and isn’t meant to copy any college website or caus
                     </div>
                 </div>
 
-            
+
                 <div class="col-sm-4" id="news" style="text-align: justify;
   text-justify: inter-word;">
                     <div class='news-content '>
@@ -605,14 +682,18 @@ This is just a fun project and isn’t meant to copy any college website or caus
                             <h2>News</h2>
                         </div>
                         <ul id="news-list">
-                            <li>
+                            <li class="announcments">
+                                <!-- <b>Mr. Robin Bansal</b> got a PPO of <b> 69 Lpa</b> as <b> Director of IITB</b> -->
+                                <b>Mr. Robin Bansal</b> Got his Internship Extended till <b>May 2025</b><i> Dec,2024</i>
+                            </li>
+                            <li class="announcments">
                                 <!-- <b>Mr. Robin Bansal</b> got a PPO of <b> 69 Lpa</b> as <b> Director of IITB</b> -->
                                 <b>Mr. Robin Bansal</b> got intern as <b> Data Analyst</b> at <b> Lloyds Logistics Pvt.
                                     Ltd.</b><i> 24 july 2024</i>
                             </li>
 
 
-                            <li>
+                            <li class="announcments">
                                 <!-- <b>Dr. Madhuri Tayade</b>
                                 </br> will get Promotion to
                                 <b>Assistant Professor</b> soon -->
@@ -621,7 +702,7 @@ This is just a fun project and isn’t meant to copy any college website or caus
                                     Guwahati</b><i> 20 july 2024</i>
                             </li>
 
-                            <li>
+                            <li class="announcments">
                                 <!-- <b>Dr. Madhuri Tayade</b>
                                 </br> will get Promotion to
                                 <b>Assistant Professor</b> soon -->
@@ -630,7 +711,7 @@ This is just a fun project and isn’t meant to copy any college website or caus
                                     2024</i>
                             </li>
 
-                            <li>
+                            <li class="announcments">
                                 <!-- <b>Group A</b> of TC headed by <b>Robin Bansal</b> gets <b>10 out of 10</b> for their
                                 presentation -->
                                 <b>Mr. Robin Bansal</b> got his first intern as <b> Project Intern</b> at <b> IIIT
@@ -646,7 +727,7 @@ This is just a fun project and isn’t meant to copy any college website or caus
                             <!-- </ul> -->
 
 
-                            <li>
+                            <li class="announcments">
                                 <b>IIT Butibori</b> get 1st NIRF ranking in Engineering surpassing IIT bombay
 
                             </li>
@@ -719,16 +800,16 @@ This is just a fun project and isn’t meant to copy any college website or caus
             </div>
 
         </div>
-        
+
         <div style="margin-left: 10%; margin-right: 10%;">
             <h6 style="text-align: justify;
-  text-justify: inter-word;" > <b>DISCLAIMER: </b>
+  text-justify: inter-word;"> <b>DISCLAIMER: </b>
                 Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for
                 “fair use” for purposes such as criticism, comment, news reporting, teaching, scholarship,
                 education and research. Fair use is a use permitted by copyright statute that might
                 otherwise be infringing.</h6>
         </div><br>
-        <Br><br>
+        <Br>
         <!-- Footer -->
         <footer>
             <div class="footer-wrapper">
@@ -736,7 +817,8 @@ This is just a fun project and isn’t meant to copy any college website or caus
                 <div class="row">
                     <div class="col-sm-4 address" style="text-align: justify;
   text-justify: inter-word;">
-                        <strong>Address : </strong>Survey No. 140,141/1 behind Br. Sheshrao Wankhade Shetkari Sahkari Soot Girni, Village- Waranga, PO-Dongargaon(Butibori), Tahsil-Nagpur (Rural), District Nagpur, Maharashtra - 441108
+                        <b>Address : </b>Engineering Cooperative Housing Society, Sai Nagar, Near Hotel Airport Centre
+                        point, Laxmi Vihar, Wardha Road, Opposite Ujwal Nagar, Somalwada, Nagpur, Maharashtra - 440025
                     </div>
                     <div class="col-sm-4 links">
                         <div>
@@ -793,6 +875,7 @@ This is just a fun project and isn’t meant to copy any college website or caus
         crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/434d359724.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/new.js"></script>
     <script>
         $(document).ready(function () {
             $('[data-toggle="popover"]').popover();
@@ -811,6 +894,9 @@ This is just a fun project and isn’t meant to copy any college website or caus
                 navbar.classList.remove('fixed');
             }
         };
+
+
+
 
     </script>
 

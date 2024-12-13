@@ -11,23 +11,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
         integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
     <style>
-        .footer-social a {
-            margin: 0 10px;
-            color: #333;
-            font-size: 20px;
-            transition: color 0.3s ease;
-        }
+.moon {
+    /* color: #f5f5f5; */
+    display: none;
+    /* opacity: 0; */
+    /* Hidden by default (light mode) */
+}
 
-        .footer-social a:hover {
-            color: #007bff;
-            /* Adjust color for hover effect */
-        }
-
-        .footer-social i {
-            display: inline-block;
-            vertical-align: middle;
-        }
     </style>
 </head>
 
@@ -45,15 +39,20 @@
                             <div class="logo"><a href="index.html" title=""><img src="img/aa.png" alt="logo"></a></div>
                             <div class="name">
                                 <a href="index.html" title="">
-                                    <h5>International Institute of Technology</h5>
+                                    <h5 
+ id="mainheading">International Institute of Technology</h5>
                                     <h5 class="primary-color">Butibori</h5>
                                 </a>
                             </div>
                         </div>
                     </div>
+                    <div id="theme-toggle" class="toggle-button">
+                        <i class="fas fa-sun sun"></i>
+                        <i class="fas fa-moon moon"></i>
+                    </div>
                     <div class="header-links">
                         <a href="#" data-toggle="popover" title="Address"
-                            data-content="Sutgirni Village - Waranga, PO - Dongargaon(Butibori), Tahsil- Nagpur (Rural), District Nagpur, Maharashtra - 441108"
+                            data-content="Patiala, Punjab - 147201"
                             data-placement="bottom"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></a>
 
                         <a href="#" data-toggle="popover" title="Phone No." data-content="+91-7009852477"
@@ -65,7 +64,7 @@
                 </div>
             </div>
             <nav>
-                <div class="navbar navbar-inverse navbar-custom" role="navigation">
+                <div class="navbar navbar-inverse navbar-custom" role="navigation" id="navbar">
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -363,7 +362,7 @@
                 <div class="row">
                     <div class="col-sm-4 address" style="text-align: justify;
   text-justify: inter-word;">
-                        <strong>Address : </strong>Survey No. 140,141/1 behind Br. Sheshrao Wankhade Shetkari Sahkari                     Soot Girni, Village- Waranga, PO-Dongargaon(Butibori), Tahsil-Nagpur (Rural), District Nagpur, Maharashtra - 441108
+                        <strong>Address : </strong>Engineering Cooperative Housing Society, Sai Nagar, Near Hotel Airport Centre point, Laxmi Vihar, Wardha Road, Opposite Ujwal Nagar,  Somalwada,  Nagpur, Maharashtra - 440025
                     </div>
                     <div class="col-sm-4 links">
                         <div>
@@ -433,7 +432,7 @@
                 }
             });
         })
-    </script>
+   </script><script src="js/new.js"></script>
 </body>
 
 </html>

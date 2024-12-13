@@ -73,7 +73,7 @@ body {
 }
 
 .toggle-button:hover {
-    transform: scale(1.3);
+    transform: scale(1.5);
 }
 
 body.dark-mode .toggle-button {
